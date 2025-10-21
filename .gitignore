@@ -1,0 +1,143 @@
+# ======================================================
+# n8n High-Performance Setup - .gitignore
+# ======================================================
+
+# Umgebungsvariablen (enthält Passwörter!)
+.env
+.env.local
+.env.*.local
+
+# Data Directories (lokale Daten, nicht ins Repo!)
+data/
+/data
+*/data/*
+postgres/
+redis/
+n8n/
+
+# Backups
+*.sql
+*.sql.gz
+*.dump
+backup/
+backups/
+
+# Logs
+*.log
+logs/
+
+# Temporäre Dateien
+*.tmp
+*.temp
+tmp/
+.tmp/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Editor-spezifisch
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains (IntelliJ, WebStorm, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea_modules/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+Shada
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Node.js (falls n8n-Entwicklung)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Python (falls Custom Nodes/Scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+
+# Zertifikate & Keys (NIEMALS committen!)
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+ssl/
+certs/
+
+# Monitoring & Metrics
+prometheus/
+grafana/
+*.rrd
+
+# Sonstiges
+.cache/
+.pytest_cache/
+.coverage
+*.swp
+*.swo
+*~.nib
